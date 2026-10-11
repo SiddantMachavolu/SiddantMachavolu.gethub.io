@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio website for Siddant Machavolu, Rutgers University Supply Chain Management student." />
+  <title>Siddant Machavolu | Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 8%;
+      background: #ffffff;
+      border-bottom: 1px solid #e6eaf0;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #172033;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #eef4ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #2563eb;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      margin-bottom: 18px;
+    }
+
+    .statement {
+      font-size: 1.35rem;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: #445069;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .button-secondary {
+      background: white;
+      color: #2563eb;
+      border: 1px solid #cfd8e8;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #667085;
+      margin-bottom: 32px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-card,
+    .project-card {
+      background: white;
+      border: 1px solid #e5eaf1;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(25, 40, 70, 0.05);
+    }
+
+    .skill-card h3,
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .skill-card p,
+    .project-card p {
+      color: #596579;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: #2563eb;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #2563eb;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .about-box {
+      background: #172033;
+      color: white;
+      border-radius: 16px;
+      padding: 34px;
+    }
+
+    .about-box p {
+      color: #d7ddea;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #667085;
+      background: white;
+      border-top: 1px solid #e6eaf0;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        gap: 14px;
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h2>Siddant Machavolu</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="about">
+    <div class="hero-content">
+      <p class="eyebrow">Supply Chain • Product • Data</p>
+
+      <h1>Siddant Machavolu</h1>
+
+      <p class="statement">
+        I am a Rutgers University Supply Chain Management student who combines data analysis,
+        product thinking, customer-facing experience, and leadership to improve business operations
+        and create measurable results.
+      </p>
+
+      <div class="buttons">
+        <a class="button button-primary" href="#projects">View My Projects</a>
+
+        <a
+          class="button button-secondary"
+          href="https://www.linkedin.com/in/siddant-machavolu-781b20396/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          class="button button-secondary"
+          href="mailto:sidmachavolu@gmail.com"
+        >
+          Email Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <p class="section-subtitle">
+      Technical and professional skills I use across business, product, sales, and operations.
+    </p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Data & Analytics</h3>
+        <p>
+          Python, Microsoft Excel, data visualization,
+          business analytics, and inventory tracking.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Product & Operations</h3>
+        <p>
+          Product development support, business requirements,
+          workflow improvement, and supply chain thinking.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Marketing & Sales</h3>
+        <p>
+          Social media marketing, customer relationship management,
+          personalized selling, and outreach.
+        </p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Leadership</h3>
+        <p>
+          Public speaking, business communication, organization,
+          recruitment strategy, and conflict resolution.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects & Applied Experience</h2>
+
+    <p class="section-subtitle">
+      Examples of work where I applied analytical, operational,
+      marketing, and leadership skills.
+    </p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <span class="project-tag">Product Management</span>
+
+        <h3>AI Talent Acquisition Platform</h3>
+
+        <p>
+          Supported product development for an AI-powered SaaS
+          talent acquisition platform at IQuadra Information Services.
+          I worked alongside the Product Owner, helped gather
+          stakeholder requirements, and contributed to improving
+          recruitment workflows through data-driven product insights.
+        </p>
+
+        <a
+          class="project-link"
+          href="https://www.linkedin.com/in/siddant-machavolu-781b20396/"
+          target="_blank"
+        >
+          View Professional Profile →
+        </a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-tag">Sales & Inventory</span>
+
+        <h3>Fragrance Sales & Inventory Tracking</h3>
+
+        <p>
+          Managed customer relationships and inventory movement
+          in a retail fragrance environment. I achieved an average
+          transaction value of $220 with 2.4 units per transaction
+          while monitoring stock levels and helping maintain
+          product availability.
+        </p>
+
+        <a
+          class="project-link"
+          href="https://www.linkedin.com/in/siddant-machavolu-781b20396/"
+          target="_blank"
+        >
+          View Professional Profile →
+        </a>
+      </div>
+
+      <div class="project-card">
+        <span class="project-tag">Leadership & Growth</span>
+
+        <h3>Recruitment Growth Strategy</h3>
+
+        <p>
+          As Recruitment Chair for Phi Delta Theta, I helped lead
+          recruitment strategy, event planning, outreach campaigns,
+          and candidate engagement. These efforts contributed to a
+          71.3% increase in membership compared with the previous semester.
+        </p>
+
+        <a
+          class="project-link"
+          href="https://www.linkedin.com/in/siddant-machavolu-781b20396/"
+          target="_blank"
+        >
+          View Professional Profile →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="about-box">
+      <h2>About Me</h2>
+
+      <p>
+        I am pursuing a B.S. in Supply Chain Management at Rutgers
+        University in New Brunswick. My experience spans product
+        management, marketing, sales, inventory tracking, and leadership.
+        I am especially interested in opportunities where I can use data
+        and business strategy to solve operational problems and improve
+        the customer or user experience.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Siddant Machavolu • Built for GitHub Pages</p>
+  </footer>
+</body>
+</html>
